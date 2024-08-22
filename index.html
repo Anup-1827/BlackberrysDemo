@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BlackBerrys AR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/index.1d42ac3b.css">
+  </head>
+  <body>
+    <!-- Button Container -->
+    <div class="mainContainer">
+      <button id="strechableBtn">Stretchable</button>
+      <button id="wrinkleBtn">Wrinkle Free</button>
+    </div>
+
+    <!-- Loader -->
+    <!-- <div class="loaderContainer">
+		<img src="./video/loader.gif"/>
+	</div> -->
+
+    <!-- Redirection Button -->
+    <div>
+      <a href="#" class="redirectionBtn">
+        <img src="/redirect.bf42eacf.png">
+      </a>
+    </div>
+
+    <div class="container">
+      <video id="video" autoplay=""></video>
+      <!-- Stretching -->
+      <!-- <video
+        crossorigin="anonymous"
+        preload="auto"
+        muted="true"
+        loop="true"
+        webkit-playsinline
+        playsinline
+        id="video01"
+        src="./video/stretching1.mp4"
+      ></video> -->
+
+      <!-- <video crossorigin="anonymous" preload="auto" autoplay="true" muted="true" loop="true" webkit-playsinline playsinline id="video02" src="./video/wrinkleFree.mp4"></video> -->
+
+      <!-- <img id="staticImg1" src="./img/staticImage.png" /> -->
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <script>const video = document.getElementById("video");
+const canvas = document.getElementById("canvas");
+navigator.mediaDevices.getUserMedia({
+    video: true
+}).then((stream)=>{
+    video.srcObject = stream;
+}).catch((err)=>{
+    console.error("Error accessing the camera: ", err);
+});
+
+</script>
+
+    <script src="/index.081522b9.js" async="" defer=""></script>
+  </body>
+</html>
